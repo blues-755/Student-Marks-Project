@@ -7,13 +7,16 @@ import java.util.UUID;
 
 public class UserFactory {
 
-    public static User build(String firstName, String email, String lastName, int genderId, int classId, String contactNumber){
+    public static User build(String firstName, String lastName, String email, int genderId, int classId, String contactNumber){
 
-        //Complex Configs for null and negative values
-
-        if (firstName.isEmpty() || lastName.isEmpty() || contactNumber.length() <= 0 || email.isEmpty()){
-            return null;
+        try {
+            if (firstName.isEmpty() || lastName.isEmpty() || genderId <= 0 || classId <= 0){
+                return null;
+            }
+        }catch (NullPointerException e){
+            System.out.println("Enter all values");
         }
+
         email = email == null ? "" : email;
         String userid = UUID.randomUUID().toString();
         return new User.Builder()

@@ -10,13 +10,14 @@ package za.ac.cput.Entity;
 public class User {
 
     String userId, firstName, lastName, email, contactNumber;
-    int age, classId, genderId;
+    int classId, genderId;
 
     public User(Builder builder) {
+        this.userId = builder.userId;
+        this.contactNumber = builder.contactNumber;
         this.firstName = builder.firstName;
         this.lastName = builder.lastName;
         this.email = builder.email;
-        this.age = builder.age;
         this.classId = builder.classId;
         this.genderId = builder.genderId;
     }
@@ -24,7 +25,7 @@ public class User {
     public static class Builder {
 
         String userId, firstName, lastName, email, contactNumber;
-        private int age, classId, genderId;
+        private int classId, genderId;
 
         public Builder setUserId(String userId) {
             this.userId = userId;
@@ -60,22 +61,16 @@ public class User {
             this.email = email;
             return this;
         }
-        public Builder setAge(int age) {
-            this.age = age;
-            return this;
-        }
 
         public User builder(){
             return new User(this);
         }
 
-        //takes user attributes and initializes them to builder class.
         public Builder copy(User user){
             this.userId = user.userId;
             this.firstName = user.firstName;
             this.lastName = user.lastName;
             this.email = user.email;
-            this.age = user.age;
             this.classId = user.classId;
             this.genderId = user.genderId;
             this.contactNumber = user.contactNumber;
@@ -91,7 +86,6 @@ public class User {
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
                 ", contactNumber='" + contactNumber + '\'' +
-                ", age=" + age +
                 ", classId=" + classId +
                 ", genderId=" + genderId +
                 '}';
