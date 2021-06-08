@@ -9,7 +9,7 @@ package za.ac.cput.Entity;
 
 public class User {
 
-    String id, firstName, lastName, email, contactNumber;
+    String userId, firstName, lastName, email, contactNumber;
     int age, classId, genderId;
 
     public User(Builder builder) {
@@ -23,11 +23,11 @@ public class User {
 
     public static class Builder {
 
-        String id, firstName, lastName, email, contactNumber;
+        String userId, firstName, lastName, email, contactNumber;
         private int age, classId, genderId;
 
-        public Builder setId(String id) {
-            this.id = id;
+        public Builder setUserId(String userId) {
+            this.userId = userId;
             return this;
         }
 
@@ -71,7 +71,7 @@ public class User {
 
         //takes user attributes and initializes them to builder class.
         public Builder copy(User user){
-            this.id = user.id;
+            this.userId = user.userId;
             this.firstName = user.firstName;
             this.lastName = user.lastName;
             this.email = user.email;
@@ -86,7 +86,7 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "id='" + id + '\'' +
+                "id='" + userId + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
