@@ -1,8 +1,11 @@
+/* UserFactory.java
+    Entity for the UserFactory.
+    Author: Lunga Tshila (216282934)
+    Date: 08 June 2021
+ */
+
 package za.ac.cput.Factory;
-
-
 import za.ac.cput.Entity.User;
-
 import java.util.UUID;
 
 public class UserFactory {

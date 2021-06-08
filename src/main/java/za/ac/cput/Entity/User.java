@@ -6,7 +6,6 @@
 
 package za.ac.cput.Entity;
 
-
 public class User {
 
     String userId, firstName, lastName, email, contactNumber;
