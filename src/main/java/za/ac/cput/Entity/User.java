@@ -1,3 +1,9 @@
+/* User.java
+    Entity for the User.
+    Author: Lunga Tshila (216282934)
+    Date: 08 June 2021
+ */
+
 package za.ac.cput.Entity;
 
 
