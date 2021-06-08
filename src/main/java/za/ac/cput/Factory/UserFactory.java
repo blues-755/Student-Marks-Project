@@ -10,7 +10,7 @@ public class UserFactory {
     public static User build(String firstName, String lastName, String email, int genderId, int classId, String contactNumber){
 
         try {
-            if (firstName.isEmpty() || lastName.isEmpty() || genderId <= 0 || classId <= 0){
+            if (firstName.isEmpty() || lastName.isEmpty() || contactNumber.length()<= 0 || genderId <= 0 || classId <= 0){
                 return null;
             }
         }catch (NullPointerException e){
