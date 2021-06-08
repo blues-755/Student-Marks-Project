@@ -9,23 +9,40 @@ package za.ac.cput.Entity;
 
 public class User {
 
-    String id, firstName, lastName, middleName;
-    int age;
+    String id, firstName, lastName, email, contactNumber;
+    int age, classId, genderId;
 
     public User(Builder builder) {
         this.firstName = builder.firstName;
         this.lastName = builder.lastName;
-        this.middleName = builder.middleName;
+        this.email = builder.email;
         this.age = builder.age;
+        this.classId = builder.classId;
+        this.genderId = builder.genderId;
     }
 
     public static class Builder {
 
-        String id, firstName, lastName, middleName;
-        private int age;
+        String id, firstName, lastName, email, contactNumber;
+        private int age, classId, genderId;
 
         public Builder setId(String id) {
             this.id = id;
+            return this;
+        }
+
+        public Builder setGenderId(int genderId) {
+            this.genderId = genderId;
+            return this;
+        }
+
+        public Builder setClassId(int classId) {
+            this.classId = classId;
+            return this;
+        }
+
+        public Builder setContactNumber(String contactNumber) {
+            this.contactNumber = contactNumber;
             return this;
         }
 
@@ -39,8 +56,8 @@ public class User {
             return this;
         }
 
-        public Builder setMiddleName(String middleName) {
-            this.middleName = middleName;
+        public Builder setEmail(String email) {
+            this.email = email;
             return this;
         }
         public Builder setAge(int age) {
@@ -57,8 +74,11 @@ public class User {
             this.id = user.id;
             this.firstName = user.firstName;
             this.lastName = user.lastName;
-            this.middleName = user.middleName;
+            this.email = user.email;
             this.age = user.age;
+            this.classId = user.classId;
+            this.genderId = user.genderId;
+            this.contactNumber = user.contactNumber;
             return this;
         }
     }
@@ -68,7 +88,7 @@ public class User {
                 "id='" + id + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", middleName='" + middleName + '\'' +
+                ", middleName='" + email + '\'' +
                 ", age=" + age +
                 '}';
     }
