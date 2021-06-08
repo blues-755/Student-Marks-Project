@@ -82,14 +82,18 @@ public class User {
             return this;
         }
     }
+
     @Override
     public String toString() {
-        return "Person{" +
+        return "User{" +
                 "id='" + id + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", middleName='" + email + '\'' +
+                ", email='" + email + '\'' +
+                ", contactNumber='" + contactNumber + '\'' +
                 ", age=" + age +
+                ", classId=" + classId +
+                ", genderId=" + genderId +
                 '}';
     }
 }
