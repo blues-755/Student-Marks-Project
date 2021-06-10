@@ -1,3 +1,10 @@
+/* Role.java
+ Entity for the Role
+ Author: MMC Tshikuna (218319363)
+ Date: 8 June 2021
+
+ */
+
 package za.ac.cput.Entity;
 
 public class SubjectClass {
