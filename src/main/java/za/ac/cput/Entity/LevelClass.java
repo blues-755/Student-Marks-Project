@@ -1,3 +1,11 @@
+/*
+  LevelClass.java
+  author:  marco Mulonday 219049505
+  date 10/06/2021
+ */
+
+
+
 package za.ac.cput.Entity;
 
 public class LevelClass {
