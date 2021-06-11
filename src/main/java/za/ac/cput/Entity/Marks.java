@@ -1,45 +1,81 @@
-/*
-Klaus Traubner
-218009496
-11 June 2021
+/*  Marks.java
+    Entity for marks
+    Klaus Traubner
+    218009496
+    11 June 2021
  */
-
 
 package za.ac.cput.Entity;
 
-import java.util.Scanner;
+public class Marks {
 
-class marks {
+    String getSubject;
+    int markID, subjectID, userID, addMark;
 
-    public static void main(String[] args) {
+    public Marks(Builder builder) {
+        this.markID = builder.markID;
+        this.subjectID = builder.subjectID;
+        this.userID = builder.userID;
+        this.addMark = builder.addMark;
+        this.getSubject = builder.getSubject;
+    }
 
-        int i;
+    public static class Builder {
 
-        //Input from user
-        Scanner input = new Scanner(System.in);
-        //Accepts name from user
-        System.out.println("Please enter your name: ");
-        String name = input.next();
-        //Number of subjects = number to be divided by
-        System.out.println("Enter number of subjects");
-        int numOfSubjects = input.nextInt();
+        private int markID, subjectID, userID, addMark;
+        private String getSubject;
 
-        int[] subjectNo = new int[numOfSubjects];
-
-        double average = 0;
-
-        System.out.println("Enter marks");
-        //Amount of subjects to be divided by
-        for (i = 0; i < numOfSubjects; i++) {
-            subjectNo[i] = input.nextInt();
-            average = average + subjectNo[i];
+        public Builder setMarkID (int markID) {
+            this.markID = markID;
+            return this;
         }
 
-        for (i = 0; i < numOfSubjects - 1; i++) {
+        public Builder setSubjectID (int subjectID) {
+            this.subjectID = subjectID;
+            return this;
         }
-        //
-        System.out.println("Your average is = " + average / numOfSubjects);
+
+        public Builder setUserID (int userID) {
+            this.userID = userID;
+            return this;
+        }
+
+        public Builder addMark (int addMark) {
+            this.addMark = addMark;
+            return this;
+        }
+
+        public Builder getSubject (String getSubject) {
+            this.getSubject = getSubject;
+            return this;
+        }
+
+        public Marks builder (){
+            return new Marks(this);
+        }
+
+        public Builder copy (Marks mark){
+            this.subjectID = mark.subjectID;
+            this.markID = mark.markID;
+            this.userID = mark.userID;
+            this.addMark = mark.addMark;
+            this.getSubject = mark.getSubject;
+            return this;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return " Mark { " +
+                " subjectID = '" + subjectID + '\'' +
+                " markID = '" + markID + '\'' +
+                " userID = '" + userID + '\'' +
+                " addMark = '" + addMark + '\'' +
+                " getSubject = '" + getSubject + '\'' +
+                '}';
     }
 }
+
+
 
 
