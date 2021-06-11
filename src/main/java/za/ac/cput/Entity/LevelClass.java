@@ -8,7 +8,7 @@
 package za.ac.cput.Entity;
 
 public class LevelClass {
-    private int levelID;
+    private String levelID;
     private String levelName, grade;
 
 
@@ -20,10 +20,10 @@ public class LevelClass {
 
 
     public static class builder {
-        private int levelID;
+        private String levelID;
         private String levelName, grade;
 
-        public builder setLevelID(int levelID) {
+        public builder setLevelID(String levelID) {
             this.levelID = levelID;
             return this;
         }
@@ -49,6 +49,10 @@ public class LevelClass {
             this.levelName = levelClass.levelName;
             this.grade = levelClass.grade;
             return this;
+        }
+
+        public LevelClass builder() {
+            return new LevelClass(this);
         }
     }
 }
