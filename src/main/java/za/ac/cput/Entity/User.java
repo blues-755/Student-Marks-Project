@@ -61,6 +61,7 @@ public class User {
             return this;
         }
 
+
         public User builder(){
             return new User(this);
         }
@@ -88,5 +89,8 @@ public class User {
                 ", classId=" + classId +
                 ", genderId=" + genderId +
                 '}';
+    }
+    public String getUserId() {
+        return userId;
     }
 }
