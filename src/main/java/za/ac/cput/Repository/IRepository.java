@@ -1,6 +1,11 @@
+/* IRepository.java
+    Interface repository to CRUD the User.
+    Author: Lunga Tshila (216282934)
+    Date: 23 July 2021
+ */
+
 package za.ac.cput.Repository;
 
-import za.ac.cput.Entity.User;
 
 public interface IRepository<T, ID>{
     public T create(T t);
