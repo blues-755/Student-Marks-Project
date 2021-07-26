@@ -18,6 +18,10 @@ public class LevelClass {
         this.grade = builder.grade;
     }
 
+    public String getId() {
+       return this.levelID;
+    }
+
 
     public static class builder {
         private String levelID;
@@ -41,6 +45,10 @@ public class LevelClass {
         public LevelClass build() {
 
             return new LevelClass(this);
+        }
+        public builder getLevelID(String levelID) {
+            this.levelID = levelID;
+            return this;
         }
 
         public builder copy(LevelClass levelClass) {
