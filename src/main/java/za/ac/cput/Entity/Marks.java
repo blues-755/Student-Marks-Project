@@ -5,6 +5,7 @@
     11 June 2021
  */
 
+
 package za.ac.cput.Entity;
 
 public class Marks {
