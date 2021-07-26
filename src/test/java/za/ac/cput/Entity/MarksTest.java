@@ -11,7 +11,6 @@ import za.ac.cput.Factory.MarksFactory;
 import java.util.UUID;
 import static org.junit.jupiter.api.Assertions.*;
 
-
 class MarksTest {
 
     @Test
@@ -24,7 +23,7 @@ class MarksTest {
                 99856,
                 213503145,
                 55
-        );
+                );
 
         System.out.println(m);
         String gSubject = UUID.randomUUID().toString();
@@ -49,7 +48,7 @@ class MarksTest {
                 55632,
                 212578234,
                 65
-        );
+              );
         System.out.println(m1);
 
         String gSubject = UUID.randomUUID().toString();

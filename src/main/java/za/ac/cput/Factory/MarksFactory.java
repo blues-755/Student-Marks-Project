@@ -9,7 +9,6 @@ package za.ac.cput.Factory;
 import za.ac.cput.Entity.Marks;
 import java.util.UUID;
 
-
 public class MarksFactory {
 
     public static Marks build (String gSubject, int markID, int subjectID, int userID, int addMark){
