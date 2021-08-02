@@ -44,11 +44,8 @@ public class Gender {
             this.description = gender.description;
             return this;
         }
-
         public Gender build(){
             return new Gender(this);
         }
     }
-
-
 }

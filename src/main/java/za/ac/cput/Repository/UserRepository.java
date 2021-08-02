@@ -19,8 +19,8 @@ public class UserRepository implements IUserRepository {
         userDB = new HashSet<User>();
     }
 
-    public static UserRepository getUserRepository(){
-        if(userRepository == null){
+    public static UserRepository getUserRepository() {
+        if(userRepository == null) {
             userRepository = new UserRepository();
         }
         return userRepository;
