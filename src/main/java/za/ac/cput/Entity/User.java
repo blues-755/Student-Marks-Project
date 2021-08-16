@@ -6,10 +6,38 @@
 
 package za.ac.cput.Entity;
 
+
+
 public class User {
+
+    private User(){}
 
     String userId, firstName, lastName, email, contactNumber;
     int classId, genderId;
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getContactNumber() {
+        return contactNumber;
+    }
+
+    public int getClassId() {
+        return classId;
+    }
+
+    public int getGenderId() {
+        return genderId;
+    }
 
     public User(Builder builder) {
         this.userId = builder.userId;
