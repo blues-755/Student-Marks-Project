@@ -1,3 +1,7 @@
+/* StudentMarksApplication.java
+    Author: Lunga Tshila (216282934)
+    Date: 30 July 2021
+ */
 package za.ac.cput.Service;
 
 import static org.junit.jupiter.api.Assertions.*;

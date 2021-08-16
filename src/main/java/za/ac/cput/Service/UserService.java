@@ -1,8 +1,11 @@
-package za.ac.cput.Service;
+/* UserService.java
+    Author: Lunga Tshila (216282934)
+    Date: 30 July 2021
+ */
 
+package za.ac.cput.Service;
 import za.ac.cput.Entity.User;
 import za.ac.cput.Repository.UserRepository;
-
 import java.util.Set;
 
 public class UserService implements IUserService{

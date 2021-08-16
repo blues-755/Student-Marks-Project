@@ -1,3 +1,7 @@
+/* StudentMarksApplication.java
+    Author: Lunga Tshila (216282934)
+    Date: 15 July 2021
+ */
 package za.ac.cput;
 
 import org.springframework.boot.SpringApplication;
