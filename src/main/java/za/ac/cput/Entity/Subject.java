@@ -55,7 +55,7 @@ public class Subject {
             return new Subject(this);
         }
         // copy constructor to creates an object using another object of the same Java class
-        private Builder copy(Subject subject){
+        public Builder copy(Subject subject){
             this.subjectCode=subject.subjectCode;
             this.subjectName=subject.subjectName;
             this.semester=subject.semester;
@@ -67,5 +67,7 @@ public class Subject {
             return build();
         }
     }
-
+    public String getSubjectCode() {
+        return subjectCode;
+    }
 }
